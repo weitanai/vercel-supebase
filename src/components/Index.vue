@@ -6,15 +6,16 @@
     <button @click="() => router.push('/login')">Login</button>
     <button @click="logOut()">logout</button>
   </div>
-  <Index/>
+  <SupeIndex/>
 
 </template>
 
 <script setup lang="ts">
+import SupeIndex from './supe/SupeIndex.vue';
 import { signOut, signInWithGitHub, signInWithGoogle } from '../supe/auth';
 import { useRouter } from 'vue-router';
+
 const router = useRouter();
-import Index from './supe/Index.vue';
 
 const logOut = function () {
   console.log('log out');
