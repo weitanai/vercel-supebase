@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.24.0",
+    "@vercel/edge-config": "^0.2.1",
     "@weimax/use-list": "1.0.4",
     "pinia": "^2.0.34",
     "release-wei": "^1.2.4",

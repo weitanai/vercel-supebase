@@ -8,6 +8,9 @@ dependencies:
   '@supabase/supabase-js':
     specifier: ^2.24.0
     version: 2.24.0
+  '@vercel/edge-config':
+    specifier: ^0.2.1
+    version: 0.2.1
   '@weimax/use-list':
     specifier: 1.0.4
     version: 1.0.4(vue@3.3.0-beta.4)
@@ -821,6 +824,17 @@ packages:
       vite: 4.3.0-beta.8
     transitivePeerDependencies:
       - rollup
+    dev: false
+
+  /@vercel/edge-config-fs@0.1.0:
+    resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==}
+    dev: false
+
+  /@vercel/edge-config@0.2.1:
+    resolution: {integrity: sha512-847kYqJEbga4PGgNrctQ9XsD+2Kw/S+UjzZnIFpebQ9VbdtB0MX4anq33WetcYZYPfhZd2L0uXVnY/BcjI5dOw==}
+    engines: {node: '>=14.6'}
+    dependencies:
+      '@vercel/edge-config-fs': 0.1.0
     dev: false
 
   /@vercel/routing-utils@2.2.1:

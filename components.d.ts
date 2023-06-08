@@ -9,8 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ErrorBounday: typeof import('./src/components/error/ErrorBounday.vue')['default']
-    ErrorCmp: typeof import('./src/components/error/ErrorCmp.vue')['default']
     Index: typeof import('./src/components/Index.vue')['default']
     Login: typeof import('./src/components/sign/Login.vue')['default']
     MagicLink: typeof import('./src/components/sign/MagicLink.vue')['default']
@@ -19,6 +17,5 @@ declare module '@vue/runtime-core' {
     SignUp: typeof import('./src/components/sign/SignUp.vue')['default']
     Storage: typeof import('./src/components/supe/Storage.vue')['default']
     SupeIndex: typeof import('./src/components/supe/SupeIndex.vue')['default']
-    VDefaultFallback: typeof import('./src/components/error/VDefaultFallback.vue')['default']
   }
 }
