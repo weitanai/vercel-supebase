@@ -27,6 +27,7 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: 16px;
 }
 .country-item {
   list-style: none;

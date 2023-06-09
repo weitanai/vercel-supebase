@@ -1,18 +1,14 @@
 <template>
   <div class="header-wrapper">
-    <button @click="signInWithGoogle"> google</button>
-    <button @click="signInWithGitHub"> github</button>
-    <button @click="router.push('/magic')">magic link</button>
-    <button @click="() => router.push('/login')">Login</button>
-    <button @click="logOut()">logout</button>
+    <button @click="() => router.push('/login')" class="login-item">Login</button>
+    <button @click="logOut()" class="logout-item">logout</button>
   </div>
   <SupeIndex/>
-
 </template>
 
 <script setup lang="ts">
 import SupeIndex from './supe/SupeIndex.vue';
-import { signOut, signInWithGitHub, signInWithGoogle } from '../supe/auth';
+import { signOut} from '../supe/auth';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -32,5 +28,12 @@ const logOut = function () {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+.login-item {
+  margin:  8px;
+
+}
+.logout-item {
+  margin: 8px;
 }
 </style>

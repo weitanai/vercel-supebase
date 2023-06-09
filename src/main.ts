@@ -4,7 +4,6 @@ import App from "./App.vue";
 import { createPinia } from "pinia";
 import "virtual:uno.css";
 import router from './router';
-console.log(import.meta.env, '-----main');
 
 
 const app = createApp(App);

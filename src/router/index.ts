@@ -24,13 +24,13 @@ const router = createRouter({
   routes, // `routes: routes` 的缩写v
 });
 
-// router.beforeEach(async (to, from, next) => {
-//   const store = useStore();
-//   if (!store.getUserInfo.session && to.path !== '/login') {
-//     next('/login');
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach(async (to, from, next) => {
+  const store = useStore();
+  if (!localStorage.getItem('sb-lfgrnmcgdwljcmjvntub-auth-token') && !store.getUserInfo.session && to.path !== '/login') {
+    next('/login');
+  } else {
+    next();
+  }
+});
 
 export default router;

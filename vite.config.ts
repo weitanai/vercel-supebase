@@ -18,6 +18,17 @@ export default defineConfig(async () => {
       // outDir: '../server/app/public',
       emptyOutDir: true,
       manifest: true,
+    },
+    vercel: {
+      expiration: 25,
+      additionalEndpoints: [
+        {
+          source: 'endpoints/edge.ts',
+          destination: `edge`,
+          edge: true,
+          addRoute: true,
+        },
+      ],
     }
   }
 });

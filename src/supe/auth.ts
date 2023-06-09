@@ -13,7 +13,7 @@ export async function signUpWithEmail(email: string, password: string) {
 export async function signInWithEmail(email: string, password: string) {
     const { data, error } = await supabase.auth.signInWithPassword({
         email,
-        password,
+    password,
     });
     return { data, error };
 }
@@ -38,19 +38,13 @@ export async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'github',
     });
+    console.log(data,'-----', error);
     return { data, error }
 }
 
 export async function signInWithGoogle() {
-    try {
-        const { data, error } = await supabase.auth.signInWithOAuth({
-            provider: 'google',
-        });
-        return { data, error }
-
-
-    } catch (error) {
-        console.log('signInWithGoogle',  error);
-
-    }
+    const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+    });
+    return { data, error }
 }
