@@ -18,3 +18,5 @@
 - npm install
 - npm run dev
 
+# Site
+- https://vercel-supebase.vercel.app/
