@@ -19,4 +19,4 @@
 - npm run dev
 
 # Site
-- https://vercel-supebase.vercel.app/
+- https://vercel-supebase.vercel.app
